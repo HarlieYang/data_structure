@@ -1,7 +1,7 @@
 /*
  * @Author: HarlieYang
  * @Date: 2020-07-26 22:57:23
- * @LastEditTime: 2020-07-26 23:34:42
+ * @LastEditTime: 2020-07-30 10:22:18
  * @LastEditors: Please set LastEditors
  * @Description: 栈
  * @FilePath: /数据结构/js/stack.js
@@ -20,10 +20,12 @@ class orderStack{
         this.stack = new Array(this.capacity)
         console.log(this.stack)
     }
+
     // 2. 判断空栈 isEmpty
     isEmpty(){
         return this.top < 0;
     }
+
     // 3. 进栈  posh
     push(value){
         this.top += 1
@@ -35,6 +37,7 @@ class orderStack{
         console.log(this.stack)
         return true
     }
+
     // 4. 出栈 pop
     pop(){
         this.top -= 1
@@ -46,6 +49,7 @@ class orderStack{
         console.log(this.stack)
         return element;
     }
+    
     // 5. 取栈顶 peek
     peek(){
         if (this.top < 0){
@@ -55,6 +59,7 @@ class orderStack{
         return this.stack[this.top]
     }
 }
+
 let a = new orderStack()
 a.init()
 a.push(1)
