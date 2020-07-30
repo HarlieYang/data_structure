@@ -9,7 +9,7 @@
 // 顺序队列的实现 数组队列
 class queue {
     constructor () {
-        this.real = null   // 尾指针
+        this.rear = null   // 尾指针
         this.front  = null   // 头指针
         this.capacity = 5 // 容量
         this.data = null   // 数组
@@ -17,7 +17,7 @@ class queue {
 
     // 初始化
     init () {
-        this.front = this.real = 0
+        this.front = this.rear = 0
         this.data = new Array(this.capacity)
     }
 
@@ -26,8 +26,8 @@ class queue {
         if( this.isFull() ){
             console.error('队列已满')
         }
-        this.data[this.real] = val
-        this.real = (this.real + 1) % this.capacity
+        this.data[this.rear] = val
+        this.rear = (this.rear + 1) % this.capacity
         console.log(this.data)
         return true
     }
@@ -45,13 +45,13 @@ class queue {
 
     // 判断是否为空队列
     isEmpty (){
-        return this.real == this.front
+        return this.rear == this.front
     }
 
     // 判断是否空间满
     isFull () {
         // 循环队列解决队满的判断方法   -- 少用一个空间元素 及容量为 this.capacity--
-        return (this.real + 1) % this.capacity == this.front
+        return (this.rear + 1) % this.capacity == this.front
     }
 
     // 取队列最前端的元素
