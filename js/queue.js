@@ -1,12 +1,13 @@
 /*
  * @Author: HarlieYang
  * @Date: 2020-07-30 09:20:11
- * @LastEditTime: 2020-07-30 10:22:43
+ * @LastEditTime: 2020-08-18 23:30:07
  * @LastEditors: Please set LastEditors
  * @Description: 队列
  * @FilePath: /data_structure/js/queue.js
  */ 
 // 顺序队列的实现 数组队列
+// 1. 循环队列
 class queue {
     constructor () {
         this.real = null   // 尾指针

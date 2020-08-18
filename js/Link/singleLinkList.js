@@ -1,7 +1,7 @@
 /*
  * @Author: HarlieYang
  * @Date: 2020-07-30 14:24:29
- * @LastEditTime: 2020-07-30 17:49:24
+ * @LastEditTime: 2020-08-18 23:31:43
  * @LastEditors: Please set LastEditors
  * @Description: 单链表的实现以及增删改查
  * @FilePath: /data_structure/js/Link/singleLinkList.js
@@ -14,7 +14,6 @@ class createNode {
 }
 
 class singleLinkList{
-
     constructor(){
         this.root = null               // 根节点
         this.tailNode = null           // 尾结点
@@ -47,7 +46,6 @@ class singleLinkList{
         let headNode = this.root.next  // 头结点
         this.root.next = node
         node.next = headNode
-        // console.log(this.root)
         return true
     }
 
